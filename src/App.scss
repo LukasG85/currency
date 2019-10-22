@@ -8,6 +8,12 @@
         margin-bottom: 30px;
         text-transform: capitalize;
         text-align: center;
+        font-size: 30px;
         color: #ffffff;
+
+        @media(min-width: 576px) {
+            font-size: 35px;
+        }
+
     }
 }

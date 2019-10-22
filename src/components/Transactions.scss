@@ -27,6 +27,28 @@
     }
 }
 
+
+.largest-transaction {
+    padding-left: 15px;
+
+    &__title {
+        font-size: 20px;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+
+        span {
+            &:nth-child(2) {
+                color: #ffd700;
+            }
+        }
+    }
+}
+
 .all-transactions {
     &__title {
         font-size: 20px;
@@ -36,10 +58,23 @@
 
     &__item {
         display: flex;
-        justify-content: space-evenly;
+        flex-direction: column;
         text-align: center;
 
+        @media(min-width: 576px) {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        p {
+            display: flex;
+            justify-content: space-between;
+
+            @media(min-width: 576px) {}
+        }
+
         span {
+
             &:nth-child(2) {
                 margin-left: 10px;
                 color: #ffd700;
