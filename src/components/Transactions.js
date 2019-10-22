@@ -30,8 +30,10 @@ const Transactions = () => {
   );
 
   useEffect(() => {
-    dispatch(action.changeCurrency(exchangeRate));
-  }, [dispatch, exchangeRate]);
+    if (transactions.length > 0) {
+      dispatch(action.changeCurrency(exchangeRate));
+    }
+  }, [dispatch, exchangeRate, transactions.length]);
 
   return (
     <div>
