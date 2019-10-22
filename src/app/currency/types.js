@@ -1,3 +1,3 @@
-const ADD_CURRENCY = "ADD_CURRENCY";
+const RATE_CHANGE = "RATE_CHANGE";
 
-export default { ADD_CURRENCY };
+export default { RATE_CHANGE };

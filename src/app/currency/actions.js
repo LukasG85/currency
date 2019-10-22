@@ -1,5 +1,5 @@
 import types from "./types";
 
-const addCurrency = item => ({ type: types.ADD_CURRENCY, item });
+const addCurrency = item => ({ type: types.RATE_CHANGE, item });
 
 export default { addCurrency };

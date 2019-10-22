@@ -4,9 +4,9 @@ const add = item => ({ type: types.ADD_TRANSACTION, item });
 
 const remove = id => ({ type: types.DELETE_TRANSACTION, id });
 
-const changeCurrency = cur => ({
+const changeCurrency = rate => ({
   type: types.CHANGE_TRANSACTION,
-  cur
+  rate
 });
 
 export default { add, remove, changeCurrency };

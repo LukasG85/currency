@@ -12,7 +12,7 @@ const Transactions = () => {
 
   const getGreatestValue = [...transactions]
     .sort((a, b) => {
-      if (a.currency < b.currency) {
+      if (parseFloat(a.currency) < parseFloat(b.currency)) {
         return 1;
       } else {
         return -1;
@@ -21,7 +21,7 @@ const Transactions = () => {
     .slice(0, 1);
 
   const sumCurrency = [...transactions].reduce(
-    (sum, { currency }) => sum + parseInt(currency),
+    (sum, { currency }) => sum + parseFloat(currency),
     0
   );
   const sumCurrencyConvertet = [...transactions].reduce(
@@ -69,11 +69,11 @@ const Transactions = () => {
                 <div>
                   <p className="largest-transaction__item">
                     <span> Name:</span>
-                    <span>{getGreatestValue[0].name}</span>{" "}
+                    <span>{getGreatestValue[0].name}</span>
                   </p>
                   <p className="largest-transaction__item">
                     <span>Amount in €:</span>
-                    <span>{getGreatestValue[0].currency}</span>{" "}
+                    <span>{getGreatestValue[0].currency}</span>
                   </p>
                   <p className="largest-transaction__item">
                     <span>Amount in PLN:</span>
@@ -100,7 +100,7 @@ const Transactions = () => {
                   </p>
                   <p>
                     <span>sum in euros: </span>
-                    <span>{sumCurrency}</span>
+                    <span>{sumCurrency.toFixed(2)}</span>
                   </p>
                   <p>
                     <span> sum in PLN:</span>

@@ -13,7 +13,9 @@ const CurencyConverter = () => {
 
   const add = e => {
     e.preventDefault();
-    dispatch(actions.addCurrency(value));
+    if (value !== currency) {
+      dispatch(actions.addCurrency(value));
+    }
   };
 
   return (
@@ -24,9 +26,10 @@ const CurencyConverter = () => {
             <div className="col-md-9">
               <input
                 className="currency-input"
-                type="text"
+                type="number"
                 name="currency"
                 placeholder="define currency"
+                step="0.01"
                 value={value}
                 onChange={handleChange}
               />

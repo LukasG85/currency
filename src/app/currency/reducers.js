@@ -4,7 +4,7 @@ const INITIAL_STATE = 4.27;
 
 const currencyReducers = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case types.ADD_CURRENCY:
+    case types.RATE_CHANGE:
       return action.item;
     default:
       return state;

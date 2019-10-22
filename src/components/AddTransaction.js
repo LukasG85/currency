@@ -55,6 +55,7 @@ const AddTransaction = () => {
               className="transaction-input"
               type="number"
               name="currency"
+              step="0.01"
               placeholder="Enter currency"
               value={transaction.currency === 0 ? "" : transaction.currency}
               onChange={handleChange}
