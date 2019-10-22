@@ -1,0 +1,49 @@
+.table.table-hover.table-transactions {
+    color: #ffffff;
+
+    thead th {
+        border-bottom: 1px solid #ffd700;
+    }
+
+    td,
+    th {
+        padding: 0.3rem 0;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    th {
+        padding-right: 0.6rem;
+    }
+
+    td {
+        width: 25%;
+    }
+
+    tr.hover-items {
+        &:hover {
+            color: #daa520;
+        }
+    }
+}
+
+.all-transactions {
+    &__title {
+        font-size: 20px;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+
+        span {
+            &:nth-child(2) {
+                margin-left: 10px;
+                color: #ffd700;
+            }
+        }
+    }
+}
