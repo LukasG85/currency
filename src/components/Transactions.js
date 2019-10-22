@@ -39,30 +39,25 @@ const Transactions = () => {
         <div className="row no-gutters">
           <div className="col-md-8">
             {transactions.length > 0 && (
-              <div className="table-responsive-md w-100 d-block d-md-table">
-                <table className="table table-hover table-transactions">
-                  <thead>
-                    <tr>
-                      <th scope="col"></th>
-                      <th scope="col">Name</th>
-                      <th scope="col">€</th>
-                      <th scope="col">PLN</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {transactions &&
-                      transactions.map((transaction, index) => (
-                        <tr className="hover-items" key={index}>
-                          <Transaction
-                            transaction={transaction}
-                            index={index}
-                          />
-                        </tr>
-                      ))}
-                  </tbody>
-                </table>
-              </div>
+              <table className="table table-sm table-hover table-transactions">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Name</th>
+                    <th scope="col">€</th>
+                    <th scope="col">PLN</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {transactions &&
+                    transactions.map((transaction, index) => (
+                      <tr className="hover-items" key={index}>
+                        <Transaction transaction={transaction} index={index} />
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
             )}
           </div>
           <div className="col-md-4">
