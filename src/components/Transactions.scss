@@ -29,7 +29,10 @@
 
 
 .largest-transaction {
-    padding-left: 15px;
+    @media(min-width: 768px) {
+        padding-left: 15px;
+    }
+
 
     &__title {
         font-size: 20px;
